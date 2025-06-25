@@ -1,0 +1,51 @@
+@use '../vars';
+
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background-color: vars.$white;
+    border-radius: 8px;
+
+    &__list {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 18px;
+            letter-spacing: 0.09em;
+            color: vars.$terciary-txt-color;
+            
+            b {
+                display: block;
+                color: vars.$terciary-txt-color;
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+    @media(max-width: 640px) {
+        display: block;
+
+        &__list {
+            display: block;
+            text-align: center;
+
+            &__item {
+                font-size: 16px;
+                margin-bottom: 18px;
+
+                b {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 1024px) {
+        &__list {
+            gap: 16px;
+        }
+    }
+}

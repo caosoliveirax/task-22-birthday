@@ -1,0 +1,24 @@
+@use '../vars';
+
+.button {
+    background-color: vars.$orange;
+    color: vars.$main-txt-color;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+
+    @media(max-width: 640px) {
+        display: block;
+        font-size: 16px;
+    }
+
+    @media(max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+}

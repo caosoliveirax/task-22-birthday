@@ -1,0 +1,27 @@
+@use 'vars';
+@use 'sections/hero';
+@use 'components/info-bar';
+@use 'components/buttons';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    list-style: none;
+    color: vars.$main-txt-color;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media(max-width: 640px) {
+        max-width: 80%;
+    }
+
+    @media(max-width: 1024px) {
+        max-width: 90%;
+    }
+}
