@@ -1,0 +1,75 @@
+@use '../vars';
+
+.event {
+    padding: 80px 0;
+
+    &--friend {
+        background-image: linear-gradient(vars.$orange1, vars.$orange2);
+    }
+
+    &--game {
+        background-image: linear-gradient(vars.$orange2, vars.$orange3);
+    }
+
+    &--food {
+        background-image: linear-gradient(vars.$orange3, vars.$red);
+    }
+
+    &--music {
+        background-image: linear-gradient(vars.$red, vars.$pink);
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__details {
+        &__title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        &__description {
+            line-height: 22px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    @media(max-width: 640px) {
+        text-align: center;
+        
+        .container {
+            display: block;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+
+            &__title {
+            font-size: 24px;
+        }
+
+            &__description {
+                font-size: 16px;
+            }
+        }
+
+        &__image {
+            width: 70%;
+        }
+    }
+}
